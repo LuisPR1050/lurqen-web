@@ -3,7 +3,7 @@
 export const site = {
   name: "LURQEN",
   tagline: "Software · AI · Automation",
-  url: "https://lurqen.com", // TODO: tu dominio final
+  url: "https://lurqen-web.vercel.app/", // TODO: tu dominio final
   description:
     "Desarrollo de software a la medida y automatizaciones con IA para negocios que quieren crecer sin multiplicar su trabajo operativo.",
   city: "Bogotá, Colombia",
