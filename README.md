@@ -6,6 +6,7 @@
 
 Landing page de **LURQEN**, marca de software a la medida y automatizaciones con IA.
 Diseñada, desarrollada y desplegada de punta a punta por [Luis Peña](https://github.com/LuisPR1050).
+Los proyectos que muestra, como [MInmo](https://github.com/LuisPR1050/minmo-crm), son software real en producción.
 
 **[Ver sitio en vivo →](https://lurqen-web.vercel.app/)**
 
@@ -14,6 +15,10 @@ Diseñada, desarrollada y desplegada de punta a punta por [Luis Peña](https://g
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?logo=tailwindcss&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+
+<br><br>
+
+<img src="docs/screenshots/inicio.png" alt="Página de inicio de LURQEN" width="860">
 
 </div>
 
@@ -27,6 +32,18 @@ Diseñada, desarrollada y desplegada de punta a punta por [Luis Peña](https://g
 - **Animaciones con accesibilidad.** Todas las animaciones (Motion) respetan la preferencia del sistema *reducir movimiento*.
 - **Contenido desacoplado del código.** Textos, servicios, proyectos y datos de contacto viven en un único archivo tipado: `src/lib/site.ts`.
 - **Renderizado estático.** Todas las rutas se prerenderizan; el build y el lint pasan sin errores ni advertencias.
+
+## Capturas
+
+| Servicios | Contacto |
+| --- | --- |
+| <img src="docs/screenshots/servicios.png" alt="Sección de servicios"> | <img src="docs/screenshots/contacto.png" alt="Sección de contacto"> |
+
+**Proyectos:** visor con pestañas y rotación automática.
+
+<img src="docs/screenshots/proyecto-minmo.png" alt="Proyecto MInmo en el sitio" width="860">
+
+<img src="docs/screenshots/proyecto-trm.png" alt="Proyecto Trading Risk Manager en el sitio" width="860">
 
 ## Stack
 
