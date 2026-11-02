@@ -81,7 +81,7 @@ export const projects = [
       "Negociación, documentación y contratos de corretaje",
       "Marketing y publicaciones",
     ],
-    stack: ["Next.js", "Supabase", "TypeScript"],
+    stack: ["Java", "Spring Boot", "PostgreSQL", "React"],
     shots: [
       { src: "/projects/minmo-sitio.png", label: "Sitio público", width: 1894, height: 882 },
       { src: "/projects/minmo-panel.png", label: "Panel de gestión", width: 1902, height: 901 },
