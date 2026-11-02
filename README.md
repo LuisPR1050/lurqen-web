@@ -1,65 +1,87 @@
+<div align="center">
+
+<img src="src/app/opengraph-image.png" alt="LURQEN — Software · AI · Automation" width="640">
+
 # LURQEN — sitio web
 
-Landing de LURQEN: software a la medida y automatizaciones con IA.
-Hecha con Next.js (App Router), Tailwind CSS y Motion.
+Landing page de **LURQEN**, marca de software a la medida y automatizaciones con IA.
+Diseñada, desarrollada y desplegada de punta a punta por [Luis Peña](https://github.com/LuisPR1050).
 
-## Arrancar en tu computador
+**[Ver sitio en vivo →](https://lurqen-web.vercel.app/)**
 
-Requisito: Node.js 20 o superior.
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React_19-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
 
-```bash
-npm install
-npm run dev
-```
+</div>
 
-Abre http://localhost:3000
+---
 
-## Datos editables
+## Lo más destacado
 
-Todo está en **`src/lib/site.ts`**: WhatsApp, correo, TikTok, dominio, textos de
-servicios, proyectos y proceso.
+- **Seguridad desde la configuración.** Cabeceras HTTP endurecidas en `next.config.ts`: Content-Security-Policy restrictiva (solo recursos propios, `frame-ancestors 'none'`, `object-src 'none'`), HSTS con preload, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy` y `Permissions-Policy`. Además se oculta la cabecera `X-Powered-By`.
+- **Cero dependencias externas en tiempo de ejecución.** Fuentes autoalojadas (Inter, Sora, JetBrains Mono) y sin scripts de terceros, lo que permite una CSP estricta y mejora la privacidad del visitante.
+- **SEO técnico.** `sitemap.xml`, `robots.txt`, imagen Open Graph e íconos generados desde el App Router.
+- **Animaciones con accesibilidad.** Todas las animaciones (Motion) respetan la preferencia del sistema *reducir movimiento*.
+- **Contenido desacoplado del código.** Textos, servicios, proyectos y datos de contacto viven en un único archivo tipado: `src/lib/site.ts`.
+- **Renderizado estático.** Todas las rutas se prerenderizan; el build y el lint pasan sin errores ni advertencias.
 
-Pendientes:
+## Stack
 
-| Campo | Qué poner |
+| Capa | Tecnología |
 | --- | --- |
-| `tiktok` | Tu usuario de TikTok, sin @ |
-| `url` | Tu dominio final (ej. `https://lurqen.com`) |
-| `founder.photo` | Tu foto en `public/` (ej. `/luis-pena.jpg`); mientras tanto se ven tus iniciales |
-
-Las capturas de proyectos están en `public/projects/`.
+| Framework | Next.js 16 (App Router, Turbopack) |
+| UI | React 19, Tailwind CSS 4, Motion, Lucide |
+| Lenguaje | TypeScript |
+| Calidad | ESLint (`eslint-config-next`) |
+| Despliegue | Vercel |
 
 ## Estructura
 
 ```
 src/
-  app/            layout, página, SEO (sitemap, robots, icono, imagen para redes)
-  components/     una sección por archivo (Hero, Process, BuildStory…)
-    ui/           piezas reutilizables (botones, brillo, texto animado)
-  fonts/          Inter, Sora y JetBrains Mono autoalojadas (licencia SIL OFL)
-  lib/site.ts     datos editables
-public/           logos
+  app/            layout, página y SEO (sitemap, robots, íconos, imagen para redes)
+  components/     una sección por archivo (Hero, Services, Projects, Process…)
+    ui/           componentes reutilizables (Button, RevealText, BrowserFrame…)
+  fonts/          fuentes autoalojadas (licencia SIL OFL)
+  lib/site.ts     datos editables del sitio
+public/           logos y capturas de proyectos
 ```
 
-## Animaciones
+## Secciones animadas
 
-- `RevealText`: los titulares suben palabra por palabra.
-- `Hero`: capturas con parallax y tarjeta de automatización que cambia sola.
-- `Marquee`: cinta en movimiento con lo que construimos.
-- `Projects`: visor de capturas que rota solo, con pestañas.
-- `BuildStory`: al hacer scroll se ilumina cada frase y el celular se arma por partes.
-- `Process`: la línea de tiempo se llena con el scroll.
-- Todo respeta la opción del sistema "reducir movimiento".
+| Componente | Comportamiento |
+| --- | --- |
+| `RevealText` | Los titulares aparecen palabra por palabra. |
+| `Hero` | Capturas con parallax y tarjeta de automatización que rota sola. |
+| `Marquee` | Cinta continua con los tipos de soluciones. |
+| `Projects` | Visor de capturas con pestañas y rotación automática. |
+| `BuildStory` | Con el scroll se ilumina cada frase y el mockup del celular se arma por partes. |
+| `Process` | La línea de tiempo se llena según el avance del scroll. |
 
-## Seguridad
+## Ejecutar en local
 
-`next.config.ts` envía cabeceras de seguridad: Content-Security-Policy,
-X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy y HSTS.
-Si agregas un script externo (analítica, chat, etc.), añade su dominio a la CSP.
+Requisito: Node.js 20 o superior.
 
-## Publicar en Vercel
+```bash
+git clone https://github.com/LuisPR1050/lurqen-web.git
+cd lurqen-web
+npm install
+npm run dev        # http://localhost:3000
+```
 
-1. Sube el proyecto a un repositorio de GitHub.
-2. En vercel.com: **Add New → Project**, importa el repo y despliega (no requiere configuración).
-3. En **Settings → Domains** conecta tu dominio.
-4. Actualiza `url` en `src/lib/site.ts` con el dominio final.
+Otros comandos:
+
+```bash
+npm run build      # build de producción
+npm run lint       # análisis estático
+```
+
+> Si agregas un script o servicio externo (analítica, chat, etc.), añade su dominio a la CSP en `next.config.ts`.
+
+## Autor
+
+**Luis Peña** — Desarrollador de software y estudiante de Ingeniería de Software con enfoque en ciberseguridad.
+Bogotá, Colombia · [LinkedIn](https://www.linkedin.com/in/luis-alberto-pe%C3%B1a-ruidiaz-a6b4092aa) · [GitHub](https://github.com/LuisPR1050)
